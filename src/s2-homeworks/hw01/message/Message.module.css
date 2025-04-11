@@ -12,6 +12,8 @@
 .imageAndText img {
     width: 48px;
     height: 48px;
+    position: relative;
+    z-index: 3;
 }
 
 .text {
