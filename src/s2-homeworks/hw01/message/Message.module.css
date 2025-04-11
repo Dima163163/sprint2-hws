@@ -31,17 +31,17 @@
     content: '';
     position: absolute;
     background-color: #0066cc;
-    width: 12px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     bottom: 0;
-    right: -12px;
+    right: -17px;
 }
 
 .text:after {
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -4px;
     right: -15px;
     background: #fff;
     width: 10px;
