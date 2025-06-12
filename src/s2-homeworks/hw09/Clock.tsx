@@ -36,7 +36,7 @@ function Clock() {
     const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
     const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds()
     const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
-    const month = date.getMonth() < 10 ? `0${date.getMonth()}` : date.getMonth()
+    const month = date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
     const year = date.getFullYear()
     const stringTime = `${hour}:${minutes}:${seconds}` || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = `${day}.${month}.${year}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
