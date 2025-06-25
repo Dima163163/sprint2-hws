@@ -40,11 +40,7 @@ function HW11() {
                             id={'hw11-single-slider'}
                             // сделать так чтоб value1 изменялось // пишет студент
                             value={value1}
-                            onChange={(e) => {
-                                const target = e.target as HTMLInputElement
-                                const value1 = +target.value
-                                change(e, value1)
-                            }}
+                            onChange={change}
                         />
                     </div>
                     <div className={s.wrapper}>
@@ -52,12 +48,7 @@ function HW11() {
                         <SuperRange
                             id={'hw11-double-slider'}
                             // сделать так чтоб value1/2 изменялось // пишет студент
-                            onChange={(e) => {
-                                const target = e.target as HTMLInputElement
-                                const value1 = +target.value[0]
-                                const value2 = +target.value[1]
-                                change(e, [value1, value2])
-                            }}
+                            onChange={change}
                             value={[value1, value2]}
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
