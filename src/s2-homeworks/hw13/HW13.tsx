@@ -9,7 +9,7 @@ import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
 
 /*
-* 1 - дописать функцию send
+* 1 - дописать функцию send - isDone
 * 2 - дизэйблить кнопки пока идёт запрос
 * 3 - сделать стили в соответствии с дизайном
 * */
@@ -21,6 +21,7 @@ const HW13 = () => {
     const [image, setImage] = useState('')
 
     const send = (x?: boolean | null) => () => {
+        console.log(x);
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
@@ -37,11 +38,25 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
-
+                setText(res.data.errorText)
+                setInfo(res.data.info)
             })
             .catch((e) => {
                 // дописать
+                    console.log(e);
+                let errorImg = e?.response?.status === 500
+                    ? error500
+                    : e?.response?.status === 400
+                        ? error400 : errorUnknown
 
+                let errorText = e?.response?.data?.errorText || 'Network Error'
+                let errorInfo = e?.response?.data?.info || e.name
+                let errorCode = e?.response?.status ? ('Ошибка '  + e.response.status ) : 'Error!'
+
+                setText(errorText)
+                setInfo(errorInfo)
+                setCode(errorCode)
+                setImage(errorImg)
             })
     }
 
@@ -56,7 +71,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === '...loading'}
                     >
                         Send true
                     </SuperButton>
@@ -65,7 +80,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === '...loading'}
                     >
                         Send false
                     </SuperButton>
@@ -74,7 +89,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === '...loading'}
                     >
                         Send undefined
                     </SuperButton>
@@ -83,7 +98,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === '...loading'}
                     >
                         Send null
                     </SuperButton>
