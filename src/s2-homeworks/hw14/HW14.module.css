@@ -1,7 +1,15 @@
 .tech {
-
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
 }
 
 .loading {
-
+    position: relative;
+    top: 0;
+    left: 320px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #4d4d4d;
 }

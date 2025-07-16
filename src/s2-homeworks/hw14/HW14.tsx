@@ -26,7 +26,7 @@ const getTechs = (find: string) => {
 
 const HW14 = () => {
     const [find, setFind] = useState('')
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(true)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<string[]>([])
 
@@ -35,20 +35,24 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
+                if (res?.data) {
+                    const techs: string[] = res.data.techs
+                    setTechs(techs)
+                }
                 //
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
+        setSearchParams({find: value})
         //
     }
 

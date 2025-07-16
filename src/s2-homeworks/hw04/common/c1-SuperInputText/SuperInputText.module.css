@@ -15,6 +15,12 @@
 
 .superInput {
     border: 1px solid #D1D1D1;
+    position: relative;
+    margin-bottom: 19px;
+}
+
+.superInput:focus {
+    border-color: #0066CC;
 }
 
 .errorInput {
