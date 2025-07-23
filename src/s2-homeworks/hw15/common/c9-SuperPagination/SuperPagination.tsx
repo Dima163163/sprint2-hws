@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react';
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
@@ -16,14 +16,18 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    const lastPage = Math.ceil(totalCount / itemsCountForPage) // пишет студент // вычислить количество страниц
+    const [count, setCount] = useState(itemsCountForPage)
+
 
     const onChangeCallback = (event: any, page: number) => {
         // пишет студент
+        onChange(page, +count)
     }
 
     const onChangeSelect = (event: any) => {
         // пишет студент
+        setCount(event.currentTarget.value)
     }
 
     return (
@@ -32,6 +36,19 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 id={id + '-pagination'}
                 sx={{
                     // стили для Pagination // пишет студент
+                    '& .MuiPaginationItem-root': {
+                        fontWeight: '400',
+                        fontSize: '14px',
+                    },
+                    '& .Mui-selected': {
+                        width: '24px',
+                        minHeight: '24px',
+                        color: '#fff',
+                        backgroundColor: '#0066CC',
+                        borderRadius: '2px',
+                        fill: '#06c'
+                    },
+
                 }}
                 page={page}
                 count={lastPage}
@@ -46,7 +63,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
             <SuperSelect
                 id={id + '-pagination-select'}
-                value={itemsCountForPage}
+                value={count}
                 options={[
                     {id: 4, value: 4},
                     {id: 7, value: 7},

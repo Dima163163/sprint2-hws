@@ -1,27 +1,74 @@
 .tech {
-    width: 50vw;
+    width: 50%;
 }
 
 .developer {
-
+    width: 50%;
 }
 
 .techHeader {
-    width: 50vw;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 50%;
+    padding: 11px 17px 17px 9px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
 }
 
 .developerHeader {
-
+    width: 50%;
+    padding: 11px 17px 17px 9px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .row {
     display: flex;
+    width: 606px;
+    padding: 12px 17px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+}
+.row:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .rowHeader {
     display: flex;
+    background-color: #e5e5e5;
+    width: 606px;
 }
 
 .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
 
+.loading img {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

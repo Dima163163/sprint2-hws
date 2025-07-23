@@ -1,11 +1,22 @@
 .pagination {
     display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 36px;
 }
 
 .text1 {
-
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0d0b0c;
+    margin-right: 10px;
 }
 
 .text2 {
-
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0d0b0c;
+    margin-left: 6px;
 }

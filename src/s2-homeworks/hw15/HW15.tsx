@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import loader from './icons/loader.svg'
 
 /*
 * 1 - дописать SuperPagination
@@ -52,34 +53,43 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
+                if (res?.data) {
+                    setTotalCount(res.data.totalCount)
+                    setTechs(res.data.techs)
+                }
+                setLoading(false)
                 //
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
+        console.log('onChangePagination newPage', newPage);
+        console.log('onChangePagination newCount', newCount);
         // setPage(
         // setCount(
+        setPage(newPage)
+        setCount(newCount)
 
         // sendQuery(
         // setSearchParams(
-
+        sendQuery({sort, page: newPage ,count: newCount})
+        setSearchParams({page: `${newPage}`, count: `${newCount}`})
         //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1)
 
         // sendQuery(
         // setSearchParams(
-
+        sendQuery({sort: newSort, page: 1 ,count: count})
+        setSearchParams({sort: newSort, page: `${1}`, count: `${count}`})
         //
     }
 
@@ -107,7 +117,9 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}>
+                    <img src={loader} alt="loader"/>
+                </div>}
 
                 <SuperPagination
                     page={page}
