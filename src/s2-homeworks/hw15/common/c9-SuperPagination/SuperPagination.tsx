@@ -46,7 +46,6 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                         color: '#fff',
                         backgroundColor: '#0066CC',
                         borderRadius: '2px',
-                        fill: '#06c'
                     },
 
                 }}
