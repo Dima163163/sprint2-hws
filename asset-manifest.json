@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sprint2-hws/static/css/main.d8cb3ff3.css",
-    "main.js": "/sprint2-hws/static/js/main.8e531589.js",
+    "main.css": "/sprint2-hws/static/css/main.b99b7003.css",
+    "main.js": "/sprint2-hws/static/js/main.c36a0629.js",
     "static/js/787.66cb4309.chunk.js": "/sprint2-hws/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/sprint2-hws/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/sprint2-hws/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -14,18 +14,21 @@
     "static/media/404.svg": "/sprint2-hws/static/media/404.9ec31c0ba8d95b0480272e46af98c955.svg",
     "static/media/montserrat-regular.woff2": "/sprint2-hws/static/media/montserrat-regular.4bc3bc9536f24ed8076d.woff2",
     "static/media/montserrat-semibold.woff2": "/sprint2-hws/static/media/montserrat-semibold.a4fbb9ff96a3a78e4209.woff2",
-    "static/media/loader.svg": "/sprint2-hws/static/media/loader.162399b8357b404bd365.svg",
+    "static/media/loader.svg": "/sprint2-hws/static/media/loader.0c42e32c68f3b610acc981d64dbbc996.svg",
     "static/media/closeOutline.svg": "/sprint2-hws/static/media/closeOutline.b64ba402fac8a549bc2de97e9cf84a61.svg",
     "static/media/editIcon.svg": "/sprint2-hws/static/media/editIcon.0a0cefd2190b593b4f76bb1a5afe0c1f.svg",
     "static/media/checked.svg": "/sprint2-hws/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/sprint2-hws/index.html",
     "static/media/burger.svg": "/sprint2-hws/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
-    "main.d8cb3ff3.css.map": "/sprint2-hws/static/css/main.d8cb3ff3.css.map",
-    "main.8e531589.js.map": "/sprint2-hws/static/js/main.8e531589.js.map",
+    "static/media/none-icon.svg": "/sprint2-hws/static/media/none-icon.83290a3e7633de9a050ccc3b303438d3.svg",
+    "static/media/down.svg": "/sprint2-hws/static/media/down.27a02b582e5c82c5122fe1659416ac2e.svg",
+    "static/media/up.svg": "/sprint2-hws/static/media/up.04d80b7ea27376f854ac2f19a2b36030.svg",
+    "main.b99b7003.css.map": "/sprint2-hws/static/css/main.b99b7003.css.map",
+    "main.c36a0629.js.map": "/sprint2-hws/static/js/main.c36a0629.js.map",
     "787.66cb4309.chunk.js.map": "/sprint2-hws/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8cb3ff3.css",
-    "static/js/main.8e531589.js"
+    "static/css/main.b99b7003.css",
+    "static/js/main.c36a0629.js"
   ]
 }
