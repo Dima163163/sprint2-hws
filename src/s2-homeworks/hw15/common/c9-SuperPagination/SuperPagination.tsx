@@ -40,7 +40,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                         fontWeight: '400',
                         fontSize: '14px',
                     },
-                    '& .Mui-selected': {
+                    '& .MuiPaginationItem-root.Mui-selected': {
                         width: '24px',
                         minHeight: '24px',
                         color: '#fff',
